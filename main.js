@@ -18,11 +18,16 @@ $(document).ready(function() {
 
         //Ciclo per attraversare ogni oggetto dell array
         for (var key in val) {
+          var source = $('#templateCd').html();
+          var template = Handlebars.compile(source);
 
+          var context = {urlImg: val.poster ,title: val.title, author: val.author, year: val.year};
+          var html = template(context);
           //trovo le coppie di chiave valore e lo stampo a schermo
-          $('.cds-container').append(key + " : " + val[key] + "<br>");
+          $('.cds-container').append(html + "<br>");
 
           console.log(key + " : " + val[key]);
+          console.log(val.title + val.genre + val.author);
         }
 
         //TAG HTML
