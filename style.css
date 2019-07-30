@@ -94,3 +94,7 @@ select {
 .cd span.year {
     color: grey;
 }
+
+.cd.dispNone{
+  display: none;
+}

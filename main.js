@@ -66,7 +66,12 @@ $(document).ready(function() {
 
           thisCd.fadeOut();
           console.log(thisCd);
-      }else {
+      }
+      else {
+        thisCd.fadeIn();
+      }
+
+      if (thisOption === "schowAll") {
         thisCd.fadeIn();
       }
     });
