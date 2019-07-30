@@ -84,6 +84,8 @@ $(document).ready(function() {
       }
       //Mostro tutti gli elementi
       if (thisOption === "showAll") {
+
+        $('#genereh1').removeClass("active");
         //Rimuovo classe al contenitore dei cd
         $('.cds-container').removeClass("select");
         thisCd.fadeIn();
