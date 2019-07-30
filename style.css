@@ -95,6 +95,8 @@ select {
     color: grey;
 }
 
-.cd.dispNone{
-  display: none;
+.cds-container.select{
+  padding: 10px;
+  border: 4px solid black;
+  justify-content: flex-start;
 }

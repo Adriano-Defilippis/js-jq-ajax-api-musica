@@ -68,10 +68,13 @@ $(document).ready(function() {
           console.log(thisCd);
       }
       else {
+        $('.cds-container').addClass("select");
         thisCd.fadeIn();
       }
 
       if (thisOption === "showAll") {
+
+        $('.cds-container').removeClass("select");
         thisCd.fadeIn();
       }
     });
