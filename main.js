@@ -18,12 +18,14 @@ $(document).ready(function() {
 
         //Ciclo per attraversare ogni oggetto dell array
         for (var key in val) {
+
+          //Clono template di handlebars
           var source = $('#templateCd').html();
           var template = Handlebars.compile(source);
 
           var context = {urlImg: val.poster ,title: val.title, author: val.author, year: val.year};
           var html = template(context);
-          //trovo le coppie di chiave valore e lo stampo a schermo
+          //Appendo al contenitore il template compilato
           $('.cds-container').append(html + "<br>");
 
           console.log(key + " : " + val[key]);
