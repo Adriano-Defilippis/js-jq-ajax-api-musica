@@ -14,6 +14,7 @@ body {
     width: 1070px;
     height: 100%;
     margin: 0 auto;
+    position: relative;
 }
 
 header {
@@ -26,12 +27,39 @@ header img {
     margin-top: 10px;
 }
 
+.filterBar{
+  width: 1070px;
+  /* height: 100%; */
+  margin: 0 auto;
+  padding: 25px 75px;
+  position: relative;
+}
+
+.filterBar > * {
+  margin-right: 20px;
+}
+
+select{
+  width: 150px;
+  padding: 10px;
+}
+
+label{
+  color: white;
+  font-size: 18px;
+}
+
+/* label,
+select {
+  position: absolute;
+} */
+
 .cds-container {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 100px 0;
+    padding-bottom: 100px;
 }
 
 .cd {
@@ -54,7 +82,7 @@ header img {
 .cd h3 {
     margin: 20px 0;
     color: white;
-    font-size: 22px;
+    font-size: 18px;
     text-transform: uppercase;
 }
 
