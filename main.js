@@ -15,9 +15,23 @@ $(document).ready(function() {
 
       $.each(arrCd, function(index, val) {
 
-        $('.cds-container').append(val.title + "<br>");
+        for (var key in val) {
 
-        console.log(val.title);
+          $('.cds-container').append("key " + key + " has value " + val[key] + "<br>");
+
+          console.log("key " + key + " has value " + val[key]);
+        }
+
+        $('.cds-container').append("<hr>");
+
+        // $('.cds-container').append(val.title + " " + val.genre + " " + val.author + " " + "<br>");
+
+        // for (const [key, value] of Object.entries(val)) {
+        //   console.log(key, value);
+        // }
+        console.log(val.title + val.genre + val.author);
+        // console.log(val.val());
+
       });
 
 
