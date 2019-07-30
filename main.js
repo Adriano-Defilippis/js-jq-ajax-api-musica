@@ -13,10 +13,11 @@ $(document).ready(function() {
       var arrCd = data.response;
       console.log(arrCd);
 
-
+      var arrOggetti = [];
       //Metodo JQUERY per scorrere tutto l'array
       $.each(arrCd, function(index, val) {
         // Ogni elemento dell'Array diventa un oggetto
+
           var oggetto =  {
                           "poster" : val.poster,
                           "title" : val.title,
@@ -28,20 +29,20 @@ $(document).ready(function() {
         var source = $('#templateCd').html();
         var template = Handlebars.compile(source);
 
-        var context = {urlImg: val.poster ,title: val.title, author: val.author, year: val.year};
+        var context = {attributo: val.genre ,urlImg: val.poster ,title: val.title, author: val.author, year: val.year};
         var html = template(context);
         //Appendo al contenitore il template compilato
         $('.cds-container').append(html + "<br>");
 
         console.log(val.title + val.genre + val.author);
 
-
+        arrOggetti.push(oggetto);
           console.log("nuovo oggetto ", oggetto);
         // }
 
 
       });
-
+      console.log("array nuovo degli oggetti restituiti da ajax: ", arrOggetti);
 
     },
 
