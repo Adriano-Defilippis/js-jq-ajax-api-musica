@@ -54,13 +54,19 @@ $(document).ready(function() {
 
   selectBar.click(function(){
 
+    var arrCd = $('.cd');
     var thisOption = $(this).val();
     console.log("valore dell'opzione cliccata: ", thisOption);
-    console.log($('.cd'));
+    console.log(arrCd);
 
-    for (var i = 0; i < $('.cd').length; i++) {
-      $('.cd')[i]
-    }
+    $.each(arrCd, function(index, val) {
+
+      var thisCd = $(this);
+        if (thisCd.attr("genere") === "Pop") {
+          console.log(thisCd);
+      }
+    });
+
 
 
   });
