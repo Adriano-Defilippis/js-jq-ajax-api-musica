@@ -13,24 +13,24 @@ $(document).ready(function() {
       var arrCd = data.response;
       console.log(arrCd);
 
+      //Metodo JQUERY per scorrere tutto l'array
       $.each(arrCd, function(index, val) {
 
+        //Ciclo per attraversare ogni oggetto dell array
         for (var key in val) {
 
+          //trovo le coppie di chiave valore e lo stampo a schermo
           $('.cds-container').append(key + " : " + val[key] + "<br>");
 
           console.log(key + " : " + val[key]);
         }
 
+        //TAG HTML
         $('.cds-container').append("<hr>");
 
-        // $('.cds-container').append(val.title + " " + val.genre + " " + val.author + " " + "<br>");
 
-        // for (const [key, value] of Object.entries(val)) {
-        //   console.log(key, value);
-        // }
         console.log(val.title + val.genre + val.author);
-        // console.log(val.val());
+
 
       });
 
