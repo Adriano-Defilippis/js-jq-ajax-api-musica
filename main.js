@@ -62,8 +62,12 @@ $(document).ready(function() {
     $.each(arrCd, function(index, val) {
 
       var thisCd = $(this);
-        if (thisCd.attr("genere") === "Pop") {
+        if (thisCd.attr("genere") !== thisOption) {
+
+          thisCd.fadeOut();
           console.log(thisCd);
+      }else {
+        thisCd.fadeIn();
       }
     });
 
