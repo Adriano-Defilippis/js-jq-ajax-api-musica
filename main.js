@@ -17,9 +17,9 @@ $(document).ready(function() {
 
         for (var key in val) {
 
-          $('.cds-container').append("key " + key + " has value " + val[key] + "<br>");
+          $('.cds-container').append(key + " : " + val[key] + "<br>");
 
-          console.log("key " + key + " has value " + val[key]);
+          console.log(key + " : " + val[key]);
         }
 
         $('.cds-container').append("<hr>");
