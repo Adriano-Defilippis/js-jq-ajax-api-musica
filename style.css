@@ -101,6 +101,7 @@ select {
 }
 
 .cds-container.select{
+  width: 60%;
   padding: 50px 10px;
   border: 4px solid #475c6c;
   justify-content: flex-start;
