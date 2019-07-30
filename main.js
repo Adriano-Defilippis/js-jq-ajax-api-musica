@@ -55,25 +55,36 @@ $(document).ready(function() {
   selectBar.click(function(){
 
     var arrCd = $('.cd');
+    //Si riferisce al valore del select scelto dall'User
     var thisOption = $(this).val();
     console.log("valore dell'opzione cliccata: ", thisOption);
     console.log(arrCd);
 
+    $('#genereh1').text(thisOption);
+
     $.each(arrCd, function(index, val) {
-
+      //Si riferisce al cd che viene cincla in un preciso momento
       var thisCd = $(this);
-        if (thisCd.attr("genere") !== thisOption) {
+      //Se il cd in questione(this) ha l'attributo genere !== da
+      //quello selezionato da <select>, allora il display diventa none
+      if (thisCd.attr("genere") !== thisOption) {
 
-          thisCd.fadeOut();
-          console.log(thisCd);
+        thisCd.fadeOut();
+        console.log(thisCd);
       }
       else {
+        //Aggiungo una classe al contenitore dei cd
         $('.cds-container').addClass("select");
+        //Faccio comparire h1 contenete nome categoria
+        $('#genereh1').addClass("active");
+
+        //e faccio comparire quelli che hanno l'attributo===
+        //alla selezione
         thisCd.fadeIn();
       }
-
+      //Mostro tutti gli elementi
       if (thisOption === "showAll") {
-
+        //Rimuovo classe al contenitore dei cd
         $('.cds-container').removeClass("select");
         thisCd.fadeIn();
       }
