@@ -71,7 +71,7 @@ $(document).ready(function() {
         thisCd.fadeIn();
       }
 
-      if (thisOption === "schowAll") {
+      if (thisOption === "showAll") {
         thisCd.fadeIn();
       }
     });
