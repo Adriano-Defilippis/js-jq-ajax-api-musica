@@ -75,6 +75,33 @@ $(document).ready(function() {
       else {
         //Aggiungo una classe al contenitore dei cd
         $('.cds-container').addClass("select");
+
+        //Creo un controllo switch per applicare il background
+        //in base al genere
+        switch (thisOption) {
+          case "Metal":
+            $('.cds-container').addClass("bg-b");
+            break;
+
+          case "Rock":
+            $('.cds-container').removeClass("bg-b bg-y bg-br");
+            $('.cds-container').addClass("bg-r");
+            break;
+
+          case "Pop":
+            $('.cds-container').removeClass("bg-b bg-r bg-br");
+            $('.cds-container').addClass("bg-y");
+            break;
+
+          case "Jazz":
+            $('.cds-container').removeClass("bg-b bg-r bg-y");
+            $('.cds-container').addClass("bg-br");
+            break;
+
+          default:
+            $('.cds-container').removeClass("bg-b bg-r bg-y bg-br");
+
+        }
         //Faccio comparire h1 contenete nome categoria
         $('#genereh1').addClass("active");
 
@@ -85,9 +112,13 @@ $(document).ready(function() {
       //Mostro tutti gli elementi
       if (thisOption === "showAll") {
 
+        //Tolgo le classi di fondo del container generi
+        $('.cds-container').removeClass("bg-b bg-r");
+        //Rimuovo il titolo H1 della categoria
         $('#genereh1').removeClass("active");
         //Rimuovo classe al contenitore dei cd
         $('.cds-container').removeClass("select");
+        //Mostro tutti i cd
         thisCd.fadeIn();
       }
     });

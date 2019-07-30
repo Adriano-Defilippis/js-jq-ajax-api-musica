@@ -103,8 +103,12 @@ select {
 .cds-container.select{
   width: 60%;
   padding: 50px 10px;
-  border: 4px solid #475c6c;
+  /* border: 4px solid #475c6c; */
   justify-content: flex-start;
+}
+
+.cds-container.select.bg-b{
+  background-color: rgba(0, 0, 87, 0.2);
 }
 
 .cds-container #genereh1.active{
@@ -113,4 +117,16 @@ select {
   position: absolute;
   top: 0;
   left: 30px;
+}
+
+.bg-r{
+  background-color: rgba(150, 0, 0, 0.2);
+}
+
+.bg-y{
+  background-color: rgba(150, 0, 100, 0.2);
+}
+
+.bg-br{
+  background-color: rgba(150, 50, 20, 0.2);
 }
