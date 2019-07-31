@@ -37,18 +37,35 @@ $(document).ready(function() {
         console.log(val.title + val.genre + val.author);
 
         arrOggetti.push(oggetto);
+
           console.log("nuovo oggetto ", oggetto);
-        // }
 
 
       });
+      //Funzine creata da me per visualizzare album
+      //genere relativo
+      selectGenere();
       console.log("array nuovo degli oggetti restituiti da ajax: ", arrOggetti);
 
     },
+    error : function(error){
+        alert("problemi con il server");
+    }
+
+
 
 
   });
 
+
+
+
+
+// DOCUMENT READY
+});
+
+//Funzione da inserire all'interno sel success
+function selectGenere(){
   var selectBar = $('select option');
   console.log(selectBar);
 
@@ -113,7 +130,7 @@ $(document).ready(function() {
       if (thisOption === "showAll") {
 
         //Tolgo le classi di fondo del container generi
-        $('.cds-container').removeClass("bg-b bg-r");
+        $('.cds-container').removeClass("bg-b bg-r bg-y bg-br");
         //Rimuovo il titolo H1 della categoria
         $('#genereh1').removeClass("active");
         //Rimuovo classe al contenitore dei cd
@@ -126,7 +143,4 @@ $(document).ready(function() {
 
 
   });
-
-
-// DOCUMENT READY
-});
+}
